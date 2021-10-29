@@ -16,6 +16,7 @@ The player controls boats in the bottom.
 The boat can move the right and left sides of the screen.
 When one shark reaches the boat, the game is over
 Players wins or loses depending on their performance.
+Increasing speed and dificulty
 
 ## Backlog
 
