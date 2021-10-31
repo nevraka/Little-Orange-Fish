@@ -5,18 +5,19 @@ a
 
 ## Description
 
-The game (didn't choose name yet) is a top-down catching game. The boat is the main animation and represents a player.
-It has shark and unicorn characters. The game's main focus is a collect unicorn and gains a point.
-The game ends when one of the sharks reaches the boat. Otherwise game continues until the player loses.
+The game Little Orange Fish is a catching game with random enemies fish and player fish. The orange colour fish represent a player.
+It has also enemies blue colour fish characters. They move to random directions and positions on the main game page.
+The game's main focus is player fish eating other fish that are smaller than it and getting bigger.
+The game ends when one of the enemy fish bigger than player fish eats at the player. Otherwise game continues until the player loses.
 
 ## MVP
 
-There are sharks, unicorns and boat on the main stage.
-The player controls boat in the bottom.
-The boat can move to the right and left sides of the screen.
-When one shark reaches the boat, the game is over
-Players wins or loses depending on their performance.
-Increasing speed and dificulty
+There are orange player fish and enemies blue fishes in the aquarium.
+The player controls the orange fish main game.
+The player orange fish can move to the right, left, top and bottom sides of the screen.
+When one bigger size enemy eats to the player, the game is over
+Players win or lose depending on their performance.
+Increasing speed and difficulty
 
 ## Backlog
 
