@@ -1,0 +1,6 @@
+  this.redirect -= 1;
+    if (this.redirect < 0) {
+      this.randomDirection();
+    }
+
+		this.redirect = Math.random() * 100 + 100;

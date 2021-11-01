@@ -1,0 +1,13 @@
+#canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+}

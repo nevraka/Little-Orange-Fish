@@ -1,7 +1,6 @@
-# Project's name
+# Little Orange Fish
 
 [Link Deploy](http://github.com/nevraka/game)
-a
 
 ## Description
 

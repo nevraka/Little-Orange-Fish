@@ -3,15 +3,20 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Game</title>
+		<title>Little Orange Fish</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-
+		<div id='startgame'>
+			<h1>Little Orange Fish</h1>
+			<h4>Orange fish wants to avoid scary sharkssss!!!</h4>
+			<button id='start'>Start Game</button>
+		</div>
+		<div id='gameover'>
+			<button id='restart'>Restart Game</button>
+		</div>
 		<canvas id='gamecanvas'></canvas>
 		<hr />
-		<button id="restart">Restart Game</button>
-		<button id="start">Start Game</button>
 		<!-- connecting your js files -->
 		<script src="fish.js"></script>
 		<script src="script.js"></script>
