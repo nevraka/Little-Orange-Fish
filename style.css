@@ -1,13 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+#startgame {
+  background-image: url('./images/firstandgameover.png');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+.inst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inst h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Boogaloo', cursive;
+  font-size: 100px;
+  color: #a34603;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding-top: 100px;
+}
+.inst h4 {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Boogaloo', cursive;
+  font-size: x-large;
+  color: #a34603;
+  align-items: center;
+  justify-content: center;
+}
+#start {
+  border: none;
+  border-radius: 0.6em;
+  font-family: 'Boogaloo';
+  font-size: 3em;
+  color: white;
+  background-color: #00dd00;
+  margin: 0;
+  padding: 0.3em 1em;
+}
 #canvas {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.buttons {
-  height: 300px;
+#gameover {
+  background-image: url('./images/firstandgameover.png');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+inst {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.finish h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Boogaloo', cursive;
+  font-size: 100px;
+  color: #a34603;
   align-items: center;
   justify-content: center;
-  margin: 0px;
+  margin: 0;
+  padding-top: 100px;
+}
+.finish h3 {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Boogaloo', cursive;
+  font-size: 3em;
+  color: #a34603;
+  align-items: center;
+  justify-content: center;
+}
+#restart {
+  border: none;
+  border-radius: 0.6em;
+  font-family: 'Boogaloo';
+  font-size: 3em;
+  color: white;
+  background-color: #00dd00;
+  margin: 0;
+  padding: 0.3em 1em;
+}
+.finish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
