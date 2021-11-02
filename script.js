@@ -1,3 +1,10 @@
+//Music
+let audio = new Audio('');
+let sound = new Audio('');
+let gameOverSong = new Audio('');
+
+//Images
+
 const bg = new Image();
 bg.src = './images/background.png';
 
@@ -7,19 +14,50 @@ fishOrange.src = './images/player.png';
 const fishBlue = new Image();
 fishBlue.src = './images/enemy.png';
 
+const shark = new Image();
+shark.src = './images/shark.png';
+
+//Game class
 class Game {
   constructor(canvas) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
-    this.score = 0;
-    this.gameFrame = 0;
-    this.ctx.font = '50px Georgia';
-    this.player = new Fish(this, fishOrange, 1);
-    this.enemies = [];
-    for (let i = 0; i < 10; i++) {
-      this.enemies.push(new Fish(this, fishBlue, 1));
-    }
+    this.player = new Fish(this, fishOrange);
+    this.player.x = this.player.width;
   }
+
+  updateSpeed = () => {
+    if (this.score >= 20) {
+      this.speed = 3;
+    } else if (this.score >= 15) {
+      this.speed = 2;
+    } else if (this.score >= 10) {
+      this.speed = 1.2;
+    } else {
+      this.speed = 1;
+    }
+  };
+
+  reset = () => {
+    this.isGameOver = false;
+    this.score = 0;
+    this.speed = 1;
+    this.friendFish = [];
+    for (let i = 0; i < 8; i++) {
+      this.friendFish.push(new Fish(this, fishBlue));
+    }
+    this.enemyFish = [];
+    for (let i = 0; i < 5; i++) {
+      this.enemyFish.push(new Fish(this, shark));
+    }
+  };
+
+  printScore = () => {
+    this.ctx.font = "30px 'Boogaloo'";
+    this.ctx.fillStyle = '#a00';
+    this.ctx.fillText(`SCORE: ${this.score}`, 40, 60);
+  };
+
   width = () => {
     return this.canvas.width;
   };
@@ -31,13 +69,49 @@ class Game {
   draw = () => {
     this.ctx.drawImage(bg, 0, 0, this.width(), this.height());
 
-    this.player.draw();
-    this.enemies.forEach((enemy) => {
+    this.friendFish.forEach((friend) => {
+      friend.move();
+      friend.checkInFrame();
+      if (friend.collision(this.player)) {
+        this.score++;
+        this.updateSpeed();
+        friend.recycle();
+      }
+      friend.draw();
+    });
+
+    this.enemyFish.forEach((enemy) => {
       enemy.move();
+      enemy.checkInFrame();
+      if (enemy.collision(this.player)) {
+        this.gameOver();
+      }
       enemy.draw();
     });
 
-    requestAnimationFrame(this.draw);
+    this.player.keepInFrame();
+    this.player.draw();
+    this.printScore();
+
+    if (!this.isGameOver) {
+      requestAnimationFrame(this.draw);
+    }
+  };
+
+  start = () => {
+    this.reset();
+    this.draw();
+    document.getElementById('startgame').style.display = 'none';
+    document.getElementById('gamecanvas').style.display = 'block';
+    document.getElementById('gameover').style.display = 'none';
+  };
+
+  gameOver = () => {
+    this.isGameOver = true;
+    document.getElementById('startgame').style.display = 'none';
+    document.getElementById('gamecanvas').style.display = 'none';
+    document.getElementById('gameover').style.display = 'block';
+    document.getElementById('gameoverscore').innerText = this.score;
   };
 }
 
@@ -50,21 +124,13 @@ window.addEventListener('load', () => {
   document.getElementById('gamecanvas').style.display = 'none';
 
   canvas.style.backgroundColor = 'none';
-  canvas.style.border = '2px solid black';
-  canvas.width = 1000;
-  canvas.height = 600;
+  canvas.width = 1400;
+  canvas.height = 650;
 
   game = new Game(canvas);
-  game.draw();
 
   window.addEventListener('keydown', (event) => {
     switch (event.key) {
-      case 'ArrowLeft':
-        game.player.x -= 10;
-        break;
-      case 'ArrowRight':
-        game.player.x += 10;
-        break;
       case 'ArrowUp':
         game.player.y -= 10;
         break;
@@ -74,7 +140,9 @@ window.addEventListener('load', () => {
     }
   });
   document.getElementById('start').addEventListener('click', () => {
-    document.getElementById('startgame').style.display = 'none';
-    document.getElementById('gamecanvas').style.display = 'block';
+    game.start();
+  });
+  document.getElementById('restart').addEventListener('click', () => {
+    game.start();
   });
 });
