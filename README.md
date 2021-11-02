@@ -4,19 +4,18 @@
 
 ## Description
 
-Little Orange Fish is a catching game with shark,blue fish and player fish. The orange colour fish represent a player.
-It has also sharks and blue fish characters. They move to the right-left direction on the main game page.
-The game's main focus is player fish touches shark and blue fish.
-The game ends when shark fish touches player fish. Player fish gain a point when touche blue fish. Otherwise game continues until the player loses.
+Little Orange Fish is a catching game with shark, blue fish and player fish. The orange color fish represents a player.
+There are also sharks and blue fish characters in the game. They move to the right-left direction on the main game page.
+The game's goal is to collect points by touching the blue fish.
+The game ends when shark touches player fish. Otherwise game continues until the player loses.
 
 ## MVP
 
 -There are orange player fish, sharks and blue fish in the sea.
--The player controls the orange fish main game.
--The player orange fish can move to the top and bottom sides of the screen.
+-The player controls the orange fish vertically in main game.
+-Other fish swim from the right edge from screen.
 -If blue fish touches the player, the player gains a score.
--Otherwise, sharks touch the player, the game is over.
--Players win or lose depending on their performance.
+-Otherwise, a shark touches the player, the game is over.
 -Speed will increase after certain scores.
 
 ## Backlog
@@ -25,37 +24,40 @@ Backlog elements.
 
 ## Data structure
 
+add scoreboard and list
+add diffrent size of fish
+
 ## script.js()
 
-Game(){}
-updateSpeed(){}
-reset(){}
-printScore(){}
-width(){}
-height(){}
-draw(){}
-start(){}
-gameOver(){}
+- Game(){this.canvas;this.ctx;this.player;this.audio}
+- updateSpeed(){}
+- reset(){}
+- printScore(){}
+- width(){}
+- height(){}
+- draw(){}
+- start(){}
+- gameOver(){}
 
 ## fish.js()
 
-Fish(){}
-draw(){}
-move(){}
-checkInFrame(){}
-recycle(){}
-keepInFrame(){}
-collision(fish){}
-start(){}
-gameOver(){}
+- Fish(){this.game;this.width;this.height;this.x;this.y;this.ctx;this.img;this.speed;this.direction()}
+- draw(){}
+- move(){}
+- checkInFrame(){}
+- recycle(){}
+- keepInFrame(){}
+- collision(fish){}
+- start(){}
+- gameOver(){}
 
 Classes and methods definition. Or functions.
 
 ## States y States Transitions
 
-Start Screen
-Game Screen
-Game Over Screen
+- Start Screen
+- Game Screen
+- Game Over Screen
 
 Definition of the different states and their transition (transition functions)
 
