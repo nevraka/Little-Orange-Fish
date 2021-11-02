@@ -8,15 +8,25 @@
 	</head>
 	<body>
 		<div id='startgame'>
-			<h1>Little Orange Fish</h1>
-			<h4>Orange fish wants to avoid scary sharkssss!!!</h4>
-			<button id='start'>Start Game</button>
+			<div class='inst'>
+				<h1>Little Orange Fish</h1>
+				<h4>Little Orange fish wants to avoid scary sharkssss!!!</h4>
+				<ul class='arrows'>
+					<li>Arrow Up --> Move to up</li>
+					<li>Arrow Down --> Move to down</li>
+				</ul>
+				<button id='start'>Start Game</button>
+			</div>
 		</div>
 		<div id='gameover'>
-			<button id='restart'>Restart Game</button>
+			<div class='finish'>
+				<h1>Game Over</h1>
+				<h4>Nice job! You will try one more time and save the little fish!</h4>
+				<h3>Score: <span id='gameoverscore'></span></h3>
+				<button id='restart'>Restart Game</button>
+			</div>
 		</div>
 		<canvas id='gamecanvas'></canvas>
-		<hr />
 		<!-- connecting your js files -->
 		<script src="fish.js"></script>
 		<script src="script.js"></script>
