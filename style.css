@@ -36,6 +36,15 @@ html {
   align-items: center;
   justify-content: center;
 }
+.arrows {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Boogaloo', cursive;
+  font-size: x-large;
+  color: #a34603;
+  align-items: center;
+  justify-content: center;
+}
 #start {
   border: none;
   border-radius: 0.6em;
