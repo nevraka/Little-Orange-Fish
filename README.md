@@ -28,11 +28,34 @@ Backlog elements.
 ## script.js()
 
 Game(){}
-speed()
+updateSpeed(){}
+reset(){}
+printScore(){}
+width(){}
+height(){}
+draw(){}
+start(){}
+gameOver(){}
+
+## fish.js()
+
+Fish(){}
+draw(){}
+move(){}
+checkInFrame(){}
+recycle(){}
+keepInFrame(){}
+collision(fish){}
+start(){}
+gameOver(){}
 
 Classes and methods definition. Or functions.
 
 ## States y States Transitions
+
+Start Screen
+Game Screen
+Game Over Screen
 
 Definition of the different states and their transition (transition functions)
 
