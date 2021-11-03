@@ -24,11 +24,11 @@ class Game {
 
   updateSpeed = () => {
     if (this.score >= 20) {
-      this.speed = 2.5;
-    } else if (this.score >= 15) {
       this.speed = 1.9;
+    } else if (this.score >= 15) {
+      this.speed = 1.5;
     } else if (this.score >= 10) {
-      this.speed = 1.2;
+      this.speed = 1.3;
     } else {
       this.speed = 1;
     }
@@ -63,7 +63,6 @@ class Game {
   };
 
   draw = () => {
-    this.gameAudio.play();
     this.ctx.drawImage(bg, 0, 0, this.width(), this.height());
 
     this.friendFish.forEach((friend) => {
@@ -96,6 +95,9 @@ class Game {
   };
 
   start = () => {
+    this.gameAudio.currentTime = 0;
+    this.gameAudio.play();
+    this.gameAudio.volume = 0.1;
     this.reset();
     this.draw();
     document.getElementById('startgame').style.display = 'none';
@@ -106,6 +108,7 @@ class Game {
   gameOver = () => {
     this.gameAudio.pause();
     this.gameOverAudio.play();
+    this.gameOverAudio.volume = 0.1;
     this.isGameOver = true;
     document.getElementById('startgame').style.display = 'none';
     document.getElementById('gamecanvas').style.display = 'none';
