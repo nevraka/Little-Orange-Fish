@@ -6,7 +6,6 @@ class Fish {
     this.x = game.width() + Math.random() * game.width();
     this.y = Math.random() * (game.height() - this.height);
     this.ctx = game.ctx;
-    this.opacity = 1;
     this.img = img;
     this.speed = 2;
     this.direction();
@@ -47,11 +46,12 @@ class Fish {
   };
 
   collision = (fish) => {
+    const d = this.height * 0.15;
     if (
       this.x < fish.x + fish.width &&
       this.x + this.width > fish.x &&
-      this.y < fish.y + fish.height &&
-      this.height + this.y > fish.y
+      this.y + d < fish.y - d + fish.height &&
+      this.height + this.y - d > fish.y + d
     ) {
       return true;
     }

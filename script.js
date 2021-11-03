@@ -1,10 +1,4 @@
-//Music
-let audio = new Audio('');
-let sound = new Audio('');
-let gameOverSong = new Audio('');
-
 //Images
-
 const bg = new Image();
 bg.src = './images/background.png';
 
@@ -24,13 +18,15 @@ class Game {
     this.ctx = canvas.getContext('2d');
     this.player = new Fish(this, fishOrange);
     this.player.x = this.player.width;
+    this.gameAudio = new Audio('./sounds/gamemusic.mp3');
+    this.gameOverAudio = new Audio('./sounds/gameover.wav');
   }
 
   updateSpeed = () => {
     if (this.score >= 20) {
-      this.speed = 3;
+      this.speed = 2.5;
     } else if (this.score >= 15) {
-      this.speed = 2;
+      this.speed = 1.9;
     } else if (this.score >= 10) {
       this.speed = 1.2;
     } else {
@@ -67,6 +63,7 @@ class Game {
   };
 
   draw = () => {
+    this.gameAudio.play();
     this.ctx.drawImage(bg, 0, 0, this.width(), this.height());
 
     this.friendFish.forEach((friend) => {
@@ -107,6 +104,8 @@ class Game {
   };
 
   gameOver = () => {
+    this.gameAudio.pause();
+    this.gameOverAudio.play();
     this.isGameOver = true;
     document.getElementById('startgame').style.display = 'none';
     document.getElementById('gamecanvas').style.display = 'none';
