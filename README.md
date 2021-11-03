@@ -1,6 +1,6 @@
 # Little Orange Fish
 
-[Link Deploy](https://github.com/nevraka/Little-Orange-Fish)
+[Link Deploy](https://nevraka.github.io/Little-Orange-Fish/)
 
 ## Description
 
@@ -11,12 +11,12 @@ The game ends when shark touches player fish. Otherwise game continues until the
 
 ## MVP
 
--There are orange player fish, sharks and blue fish in the sea.
--The player controls the orange fish vertically in main game.
--Other fish swim from the right edge from screen.
--If blue fish touches the player, the player gains a score.
--Otherwise, a shark touches the player, the game is over.
--Speed will increase after certain scores.
+- There are orange player fish, sharks and blue fish in the sea.
+- The player controls the orange fish vertically in main game.
+- Other fish swim from the right edge from screen.
+- If blue fish touches the player, the player gains a score.
+- Otherwise, a shark touches the player, the game is over.
+- Speed will increase after certain scores.
 
 ## Backlog
 
@@ -29,7 +29,7 @@ add diffrent size of fish
 
 ## script.js()
 
-- Game(){this.canvas;this.ctx;this.player;this.audio}
+- Game() {this.canvas;this.ctx;this.player;this.audio}
 - updateSpeed(){}
 - reset(){}
 - printScore(){}
