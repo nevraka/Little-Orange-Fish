@@ -20,12 +20,10 @@ The game ends when shark touches player fish. Otherwise game continues until the
 
 ## Backlog
 
-Backlog elements.
+dd Scoreboard and list
+add diffrent size of fish
 
 ## Data structure
-
-add scoreboard and list
-add diffrent size of fish
 
 ## script.js()
 
@@ -59,17 +57,9 @@ Classes and methods definition. Or functions.
 - Game Screen
 - Game Over Screen
 
-Definition of the different states and their transition (transition functions)
-
-## Task
-
-Task definition in order of priority
-
-## Additional Links
-
 ### Trello
 
-[Link url](https://trello.com)
+[Link url]
 
 ### Slides
 

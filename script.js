@@ -11,6 +11,9 @@ fishBlue.src = './images/enemy.png';
 const shark = new Image();
 shark.src = './images/shark.png';
 
+const backupfish = new Image();
+backupfish.src = './images/backupfish.png';
+
 //Game class
 class Game {
   constructor(canvas) {
@@ -27,7 +30,7 @@ class Game {
       this.speed = 1.9;
     } else if (this.score >= 15) {
       this.speed = 1.5;
-    } else if (this.score >= 10) {
+    } else if (this.score >= 5) {
       this.speed = 1.3;
     } else {
       this.speed = 1;
@@ -97,6 +100,7 @@ class Game {
   start = () => {
     this.gameAudio.currentTime = 0;
     this.gameAudio.play();
+    this.gameAudio.loop = true;
     this.gameAudio.volume = 0.1;
     this.reset();
     this.draw();
@@ -107,6 +111,7 @@ class Game {
 
   gameOver = () => {
     this.gameAudio.pause();
+    this.gameAudio.loop = false;
     this.gameOverAudio.play();
     this.gameOverAudio.volume = 0.1;
     this.isGameOver = true;
@@ -139,8 +144,15 @@ window.addEventListener('load', () => {
       case 'ArrowDown':
         game.player.y += 10;
         break;
+      case '5':
+        game.player.img = backupfish;
+        break;
+      case '6':
+        game.player.img = fishOrange;
+        break;
     }
   });
+
   document.getElementById('start').addEventListener('click', () => {
     game.start();
   });
