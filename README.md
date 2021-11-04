@@ -20,8 +20,8 @@ The game ends when shark touches player fish. Otherwise game continues until the
 
 ## Backlog
 
-dd Scoreboard and list
-add diffrent size of fish
+- add Scoreboard and list
+- add diffrent size of fish
 
 ## Data structure
 
@@ -63,4 +63,4 @@ Classes and methods definition. Or functions.
 
 ### Slides
 
-[Link Slides.com](http://slides.com)
+[Link Google Doc](https://docs.google.com/presentation/d/13Y5z4_iVt_VWFA24dCejnMPTwRXE19nixSCiUSF2oyg/edit?usp=sharing)
