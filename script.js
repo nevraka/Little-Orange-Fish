@@ -101,7 +101,7 @@ class Game {
     this.gameAudio.currentTime = 0;
     this.gameAudio.play();
     this.gameAudio.loop = true;
-    this.gameAudio.volume = 0.1;
+    this.gameAudio.volume = 0.05;
     this.reset();
     this.draw();
     document.getElementById('startgame').style.display = 'none';
@@ -113,7 +113,7 @@ class Game {
     this.gameAudio.pause();
     this.gameAudio.loop = false;
     this.gameOverAudio.play();
-    this.gameOverAudio.volume = 0.1;
+    this.gameOverAudio.volume = 0.05;
     this.isGameOver = true;
     document.getElementById('startgame').style.display = 'none';
     document.getElementById('gamecanvas').style.display = 'none';
