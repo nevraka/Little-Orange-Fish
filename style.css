@@ -61,6 +61,11 @@ html {
   height: 100%;
   margin: 0;
 }
+#canvas-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #gameover {
   background-image: url('./images/firstandgameover.png');
   background-position: center;
