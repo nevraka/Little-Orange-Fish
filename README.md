@@ -57,10 +57,6 @@ Classes and methods definition. Or functions.
 - Game Screen
 - Game Over Screen
 
-### Trello
-
-[Link url]
-
 ### Slides
 
 [Link Google Doc](https://docs.google.com/presentation/d/13Y5z4_iVt_VWFA24dCejnMPTwRXE19nixSCiUSF2oyg/edit?usp=sharing)
